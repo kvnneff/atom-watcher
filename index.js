@@ -90,7 +90,7 @@ function watchScripts() {
 
 var splitCache = {};
 function watchScript(filepath) {
-	if (~filepath.indexOf('.asar')) {
+	if (filepath && ~filepath.indexOf('.asar')) {
 		filepath = filepath.split('.asar')[0] + '.asar';
 	}
 	if (!splitCache[filepath]) {
